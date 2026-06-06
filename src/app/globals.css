@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+:root {
+  --font-figtree: 'Figtree', sans-serif;
+  --orange: #ff6900;
+  --orange-dark: #e55e00;
+  --navy: #0a4264;
+  --navy-light: #e8f0f6;
+  --border: #e2eaf0;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-figtree);
+  background: #f7f8fa;
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 32s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.animate-pulse-dot { animation: pulse-dot 2s ease infinite; }
+
+/* Terminal cursor */
+@keyframes term-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-term-cursor { animation: term-cursor 1s step-end infinite; }
+
+/* Tag color variants */
+.tag-orange { background: #fff0e6; color: #ff6900; }
+.tag-blue   { background: #e6f3ff; color: #0069aa; }
+.tag-green  { background: #e6f8ee; color: #1a6e3a; }
+.tag-navy   { background: #e8f0f6; color: #0a4264; }
+.tag-purple { background: #f0e8ff; color: #6b21a8; }
+
+/* Case study box variants */
+.cs-box-b1 { background: #fff5f0; border: 1px solid #ffd5bb; }
+.cs-box-b2 { background: #f0f6ff; border: 1px solid #b8d4f8; }
+.cs-box-b3 { background: #f0faf4; border: 1px solid #b8e2c8; }
+
+/* Skill chip */
+.skill-chip {
+  background: #fff8f4;
+  border: 1.5px solid #ffb680;
+  border-radius: 100px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff6900;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+.skill-chip:hover { background: #ff6900; color: #fff; }
+
+/* Canvas dots background for connect page */
+#connect-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
