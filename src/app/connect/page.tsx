@@ -24,19 +24,16 @@ function DotsCanvas() {
     canvas.height = parent.offsetHeight || 700;
     const ctx = canvas.getContext("2d")!;
     const W = canvas.width, H = canvas.height;
-
-    const dots = Array.from({ length: 48 }, () => ({
+    const dots = Array.from({ length: 40 }, () => ({
       x: Math.random() * W, y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
       r: Math.random() * 2 + 1,
     }));
-
     const onMouseMove = (e: MouseEvent) => {
       const r = canvas.getBoundingClientRect();
       mouseRef.current = { x: e.clientX - r.left, y: e.clientY - r.top };
     };
     parent.addEventListener("mousemove", onMouseMove);
-
     let raf: number;
     const draw = () => {
       ctx.clearRect(0, 0, W, H);
@@ -47,26 +44,18 @@ function DotsCanvas() {
         const dist = Math.hypot(d.x - mouseRef.current.x, d.y - mouseRef.current.y);
         if (dist < 80) { d.x += (d.x - mouseRef.current.x) * 0.03; d.y += (d.y - mouseRef.current.y) * 0.03; }
       });
-      for (let i = 0; i < dots.length; i++) {
-        for (let j = i + 1; j < dots.length; j++) {
-          const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(10,66,100,${(1 - dist / 120) * 0.08})`;
-            ctx.lineWidth = 1;
-            ctx.moveTo(dots[i].x, dots[i].y);
-            ctx.lineTo(dots[j].x, dots[j].y);
-            ctx.stroke();
-          }
+      for (let i = 0; i < dots.length; i++) for (let j = i + 1; j < dots.length; j++) {
+        const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(10,66,100,${(1 - dist / 120) * 0.08})`;
+          ctx.lineWidth = 1;
+          ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.stroke();
         }
       }
-      dots.forEach((d) => {
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255,105,0,0.18)";
-        ctx.fill();
-      });
+      dots.forEach((d) => { ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fillStyle = "rgba(255,105,0,0.18)"; ctx.fill(); });
       raf = requestAnimationFrame(draw);
     };
     draw();
@@ -80,14 +69,12 @@ function Terminal({ lang }: { lang: "en" | "fr" }) {
   const [lines, setLines] = useState<{ type: "cmd" | "out" | "loading"; text: string }[]>([]);
   const [typed, setTyped] = useState("");
   const cmd = "why_hire_devesh";
-
   const termLines = lang === "fr"
-    ? ["✓ 5+ ans d'expérience frontend", "✓ Expert React, Next.js & TypeScript", "✓ WordPress & systèmes de design", "✓ Performance & accessibilité", "✓ Bilan entreprise éprouvé", "✓ Communication rapide"]
-    : ["✓ 5+ Years Frontend Experience", "✓ React, Next.js & TypeScript Expert", "✓ WordPress & Design Systems", "✓ Performance & Accessibility Focus", "✓ Enterprise Client Track Record", "✓ Fast, Clear Communication"];
+    ? ["5+ ans d'expérience frontend", "Expert React, Next.js & TypeScript", "WordPress & systèmes de design", "Performance & accessibilité", "Bilan entreprise éprouvé", "Communication rapide"]
+    : ["5+ Years Frontend Experience", "React, Next.js & TypeScript Expert", "WordPress & Design Systems", "Performance & Accessibility Focus", "Enterprise Client Track Record", "Fast, Clear Communication"];
 
   useEffect(() => {
-    setLines([]);
-    setTyped("");
+    setLines([]); setTyped("");
     let i = 0;
     const typeCmd = () => {
       if (i <= cmd.length) { setTyped(cmd.slice(0, i)); i++; setTimeout(typeCmd, 70); }
@@ -110,9 +97,9 @@ function Terminal({ lang }: { lang: "en" | "fr" }) {
         <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
         <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
         <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-        <span className="ml-2 text-[12px] text-[#8b949e]">devesh@portfolio ~ </span>
+        <span className="ml-2 text-[11px] sm:text-[12px] text-[#8b949e]">devesh@portfolio ~ </span>
       </div>
-      <div className="p-5 text-[13px] leading-[1.8] min-h-[180px]">
+      <div className="p-4 sm:p-5 text-[12px] sm:text-[13px] leading-[1.8] min-h-[160px] sm:min-h-[180px]">
         <div className="text-[#8b949e]">
           $ <span className="text-[#79c0ff]">{typed}</span>
           {typed.length <= cmd.length && lines.length === 0 && (
@@ -120,9 +107,9 @@ function Terminal({ lang }: { lang: "en" | "fr" }) {
           )}
         </div>
         {lines.map((line, i) => (
-          <div key={i} className={line.type === "loading" ? "text-[#8b949e] mt-1" : "text-[#3fb950] animate-[slideIn_.3s_ease_both]"}>
+          <div key={i} className={line.type === "loading" ? "text-[#8b949e] mt-1" : "text-[#3fb950]"}>
             {line.type === "out" ? (
-              <><span className="text-[#ff6900] font-bold">✓</span> <span className="text-[#e6edf3]">{line.text.replace("✓ ", "")}</span></>
+              <><span className="text-[#ff6900] font-bold">✓</span> <span className="text-[#e6edf3]">{line.text}</span></>
             ) : line.text}
           </div>
         ))}
@@ -142,78 +129,69 @@ export default function ConnectPage() {
     { label: t.con4_t, sub: t.con4_s, href: "#" },
   ];
 
-  const whyItems = [t.why1, t.why2, t.why3, t.why4, t.why5];
-  const availItems = [t.avail1, t.avail2, t.avail3];
-
   return (
     <>
       <Navbar />
       <main className="pt-[68px]">
-        <div className="max-w-[1100px] mx-auto px-10 relative">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10 relative">
           <DotsCanvas />
           <div className="relative z-10">
-            <div className="grid grid-cols-2 gap-12 pt-16 pb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20">
+
               {/* Left */}
               <div>
                 <motion.p {...fadeUp(0.0)} className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-3">
                   {t.connect_label}
                 </motion.p>
-                <motion.h1
-                  {...fadeUp(0.05)}
-                  className="text-[clamp(36px,4.5vw,60px)] font-black text-[#0a4264] leading-[1.05] tracking-tight mb-5"
-                  dangerouslySetInnerHTML={{ __html: t.connect_h }}
-                />
-                <motion.p {...fadeUp(0.1)} className="text-[16px] text-[#4a6580] leading-[1.65] max-w-[420px] mb-10">
+                <motion.h1 {...fadeUp(0.05)}
+                  className="text-[clamp(32px,6vw,60px)] font-black text-[#0a4264] leading-[1.05] tracking-tight mb-5"
+                  dangerouslySetInnerHTML={{ __html: t.connect_h }} />
+                <motion.p {...fadeUp(0.1)} className="text-[14px] sm:text-[16px] text-[#4a6580] leading-[1.65] max-w-[420px] mb-8 sm:mb-10">
                   {t.connect_sub}
                 </motion.p>
                 <motion.div {...fadeUp(0.15)} className="flex flex-col">
                   {links.map((link, i) => (
-                    <a
-                      key={i}
-                      href={link.href}
+                    <a key={i} href={link.href}
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between py-5 border-t border-[#e2eaf0] last:border-b text-inherit no-underline group transition-all duration-200 hover:pl-2.5"
-                    >
+                      className="flex items-center justify-between py-4 sm:py-5 border-t border-[#e2eaf0] last:border-b text-inherit no-underline group transition-all duration-200 hover:pl-2.5">
                       <div>
-                        <div className="text-[18px] font-extrabold text-[#0a4264]">{link.label}</div>
-                        <div className="text-[13px] text-[#7a95a8] mt-0.5">{link.sub}</div>
+                        <div className="text-[16px] sm:text-[18px] font-extrabold text-[#0a4264]">{link.label}</div>
+                        <div className="text-[12px] sm:text-[13px] text-[#7a95a8] mt-0.5">{link.sub}</div>
                       </div>
-                      <span className="text-[20px] font-bold text-[#ff6900] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1">
-                        ↗
-                      </span>
+                      <span className="text-[18px] sm:text-[20px] font-bold text-[#ff6900] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                     </a>
                   ))}
                 </motion.div>
               </div>
 
               {/* Right */}
-              <motion.div {...fadeUp(0.1)} className="flex flex-col gap-6">
+              <motion.div {...fadeUp(0.1)} className="flex flex-col gap-4 sm:gap-6">
                 {/* Availability */}
-                <div className="bg-white border border-[#e2eaf0] rounded-[18px] p-7">
-                  <div className="flex items-center gap-2.5 mb-5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse-dot" />
-                    <span className="text-[16px] font-extrabold text-[#0a4264]">{t.avail_title}</span>
+                <div className="bg-white border border-[#e2eaf0] rounded-[18px] p-5 sm:p-7">
+                  <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse-dot shrink-0" />
+                    <span className="text-[15px] sm:text-[16px] font-extrabold text-[#0a4264]">{t.avail_title}</span>
                   </div>
                   <ul className="flex flex-col gap-2">
-                    {availItems.map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-[14px] text-[#4a6580]">
-                        <span className="text-[#ff6900] font-bold">✓</span> {item}
+                    {[t.avail1, t.avail2, t.avail3].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-[13px] sm:text-[14px] text-[#4a6580]">
+                        <span className="text-[#ff6900] font-bold shrink-0">✓</span> {item}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[13px] text-[#7a95a8] flex items-center gap-1.5">
+                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[12px] sm:text-[13px] text-[#7a95a8] flex items-center gap-1.5 flex-wrap">
                     ⏱ {t.avail_rt} <strong className="text-[#0a4264] ml-1">{t.avail_rv}</strong>
                   </div>
                 </div>
 
                 {/* Why */}
-                <div className="bg-[#0a4264] rounded-[18px] p-7">
-                  <div className="text-[16px] font-extrabold text-white mb-5">{t.why_title}</div>
+                <div className="bg-[#0a4264] rounded-[18px] p-5 sm:p-7">
+                  <div className="text-[15px] sm:text-[16px] font-extrabold text-white mb-4 sm:mb-5">{t.why_title}</div>
                   <ul className="flex flex-col gap-2.5">
-                    {whyItems.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-[14px] text-white/75 leading-snug">
-                        <span className="text-[#ff6900] font-bold flex-shrink-0 mt-0.5">✓</span> {item}
+                    {[t.why1, t.why2, t.why3, t.why4, t.why5].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-[13px] sm:text-[14px] text-white/75 leading-snug">
+                        <span className="text-[#ff6900] font-bold shrink-0 mt-0.5">✓</span> {item}
                       </li>
                     ))}
                   </ul>

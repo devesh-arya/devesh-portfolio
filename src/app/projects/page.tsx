@@ -17,40 +17,29 @@ export default function ProjectsPage() {
     <>
       <Navbar />
       <main className="pt-[68px]">
-        <div className="max-w-[1100px] mx-auto px-10 pt-16 pb-20">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2"
-          >
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20">
+          <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}
+            className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2">
             {t.proj_label}
           </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="text-[clamp(32px,4vw,48px)] font-black text-[#0a4264] tracking-tight mb-2"
-          >
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}
+            className="text-[clamp(28px,5vw,48px)] font-black text-[#0a4264] tracking-tight mb-2">
             {t.proj_title}
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[16px] text-[#4a6580] mb-12 max-w-[540px] leading-relaxed"
-          >
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-[14px] sm:text-[16px] text-[#4a6580] mb-8 sm:mb-12 max-w-[540px] leading-relaxed">
             {t.proj_sub}
           </motion.p>
 
           {/* Featured */}
           <ProjectCard project={featured} variant="featured" index={0} />
 
-          {/* Grid — pairs of 2 */}
-          {Array.from({ length: Math.ceil(rest.length / 2) }, (_, i) => (
-            <div key={i} className="grid grid-cols-2 gap-6 mb-6">
-              {rest.slice(i * 2, i * 2 + 2).map((project, j) => (
-                <ProjectCard key={project.slug} project={project} variant="grid" index={j + 1} />
-              ))}
-            </div>
-          ))}
+          {/* Grid — responsive: 1 col mobile, 2 col md+ */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {rest.map((project, j) => (
+              <ProjectCard key={project.slug} project={project} variant="grid" index={j + 1} />
+            ))}
+          </div>
         </div>
       </main>
     </>
