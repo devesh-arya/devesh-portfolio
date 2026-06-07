@@ -122,12 +122,29 @@ export default function ConnectPage() {
   const { lang } = useLang();
   const t = translations[lang];
 
-  const links = [
-    { label: t.con1_t, sub: t.con1_s, href: "mailto:devarya5295@gmail.com" },
-    { label: t.con2_t, sub: t.con2_s, href: "tel:6043653413" },
-    { label: t.con3_t, sub: t.con3_s, href: "https://linkedin.com" },
-    { label: t.con4_t, sub: t.con4_s, href: "#" },
-  ];
+const links = [
+  {
+    label: t.con1_t,
+    sub: "devesharya5201@gmail.com",
+    href: "mailto:devesharya5201@gmail.com",
+  },
+  {
+    label: t.con2_t,
+    sub: "+1 (604) 365-3413",
+    href: "tel:+16043653413",
+  },
+  {
+    label: t.con3_t,
+    sub: "linkedin.com/in/devesh-arya05",
+    href: "https://linkedin.com/in/devesh-arya05",
+  },
+  {
+    label: "Resume",
+    sub: "Download PDF Resume",
+    href: "/Devesh-Arya-Resume.pdf",
+    download: true,
+  },
+];
 
   return (
     <>
@@ -152,6 +169,7 @@ export default function ConnectPage() {
                 <motion.div {...fadeUp(0.15)} className="flex flex-col">
                   {links.map((link, i) => (
                     <a key={i} href={link.href}
+                    download={link.download}
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       rel="noopener noreferrer"
                       className="flex items-center justify-between py-4 sm:py-5 border-t border-[#e2eaf0] last:border-b text-inherit no-underline group transition-all duration-200 hover:pl-2.5">
