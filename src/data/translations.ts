@@ -6,7 +6,7 @@ export const translations: Record<Lang, Translation> = {
     nav_projects: "projects",
     nav_about: "about",
     nav_connect: "connect",
-    hero_tag: "Available for new projects",
+    hero_tag: "Available for opportunities",
     hero_sub: "Front-End Developer · React & Next.js",
     hero_bio:
       "I build <strong>scalable, responsive web applications</strong> using React.js, Next.js, and modern JavaScript. I care about performance, accessibility, and interfaces that feel <strong>clear and human</strong>. Currently at <strong>Clear Digital</strong>, shipping for Stanford, Surescripts & Hoover Institution.",

@@ -122,7 +122,12 @@ export default function ConnectPage() {
   const { lang } = useLang();
   const t = translations[lang];
 
-const links = [
+const links: {
+  label: string;
+  sub: string;
+  href: string;
+  download?: boolean;
+}[] = [ 
   {
     label: t.con1_t,
     sub: "devesharya5201@gmail.com",
@@ -141,7 +146,7 @@ const links = [
   {
     label: "Resume",
     sub: "Download PDF Resume",
-    href: "/Devesh-Arya-Resume.pdf",
+    href: "/devesh-arya-resume.pdf",
     download: true,
   },
 ];
