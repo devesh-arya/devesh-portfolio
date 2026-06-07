@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Devesh Arya — Front-End Developer",
-    description:
-      "Front-End Developer with 5+ years building scalable web apps using React, Next.js & TypeScript.",
+  description:
+    "Front-End Developer with 5+ years of experience building scalable, responsive, and high-performance web applications using React.js, Next.js, TypeScript, and modern frontend technologies. Based in British Columbia, Canada.",
     url: "https://devesharya.vercel.app",
     siteName: "Devesh Arya Portfolio",
 
