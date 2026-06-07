@@ -68,21 +68,21 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#ff6900] rounded-[14px] p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                   <div className="text-[32px] font-black text-white leading-none mb-1.5 tracking-tight">5+</div>
-                  <div className="text-[11px] font-semibold text-white/80 uppercase tracking-[.06em]">{t.stat_l1}</div>
+                  <div className="text-[12px] font-semibold text-white/80 uppercase tracking-[.06em]">{t.stat_l1}</div>
                 </div>
                 <div className="bg-white border border-[#e2eaf0] rounded-[14px] p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                   <div className="text-[32px] font-black text-[#0a4264] leading-none mb-1.5 tracking-tight">7+</div>
-                  <div className="text-[11px] font-semibold text-[#7a95a8] uppercase tracking-[.06em]">{t.stat_l2}</div>
+                  <div className="text-[12px] font-semibold text-[#4a6580] uppercase tracking-[.06em]">{t.stat_l2}</div>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white border border-[#e2eaf0] rounded-[14px] p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                   <div className="text-[22px] font-black text-[#0a4264] leading-none mb-1.5">React.js</div>
-                  <div className="text-[11px] font-semibold text-[#7a95a8] uppercase tracking-[.06em]">{t.stat_l3}</div>
+                  <div className="text-[12px] font-semibold text-[#4a6580] uppercase tracking-[.06em]">{t.stat_l3}</div>
                 </div>
                 <div className="bg-white border border-[#e2eaf0] rounded-[14px] p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
                   <div className="text-[22px] font-black text-[#0a4264] leading-none mb-1.5">A11y</div>
-                  <div className="text-[11px] font-semibold text-[#7a95a8] uppercase tracking-[.06em]">{t.stat_l4}</div>
+                  <div className="text-[12px] font-semibold text-[#4a6580] uppercase tracking-[.06em]">{t.stat_l4}</div>
                 </div>
               </div>
               <div className="bg-white border border-[#e2eaf0] rounded-[14px] p-4 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
@@ -93,7 +93,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="text-[14px] font-bold text-[#0a4264]">{t.loc_text}</div>
-                  <div className="text-[12px] text-[#7a95a8] mt-0.5">604-365-3413 · devarya5295@gmail.com</div>
+                  <div className="text-[12px] text-[#4a6580] mt-0.5">604-365-3413 · devarya5295@gmail.com</div>
                 </div>
               </div>
             </motion.div>
@@ -102,11 +102,11 @@ export default function HomePage() {
             <motion.div {...fadeUp(0.2)} className="grid grid-cols-2 gap-3 lg:hidden">
               <div className="bg-[#ff6900] rounded-[14px] p-4">
                 <div className="text-[28px] font-black text-white leading-none mb-1">5+</div>
-                <div className="text-[10px] font-semibold text-white/80 uppercase tracking-[.06em]">{t.stat_l1}</div>
+                <div className="text-[12px] font-semibold text-white/80 uppercase tracking-[.06em]">{t.stat_l1}</div>
               </div>
               <div className="bg-white border border-[#e2eaf0] rounded-[14px] p-4">
                 <div className="text-[28px] font-black text-[#0a4264] leading-none mb-1">7+</div>
-                <div className="text-[10px] font-semibold text-[#7a95a8] uppercase tracking-[.06em]">{t.stat_l2}</div>
+                <div className="text-[12px] font-semibold text-[#4a6580] uppercase tracking-[.06em]">{t.stat_l2}</div>
               </div>
             </motion.div>
           </div>
@@ -118,7 +118,7 @@ export default function HomePage() {
         {/* ── FEATURED PROJECTS ── */}
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10 mt-12 lg:mt-16">
           <motion.div {...fadeUp(0.05)}>
-            <p className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2">{t.home_proj_label}</p>
+            <p className="text-[12px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2">{t.home_proj_label}</p>
             <div className="flex justify-between items-center mb-6 lg:mb-8 gap-4">
               <h2 className="text-[clamp(24px,4vw,40px)] font-black text-[#0a4264] tracking-tight">{t.home_proj_title}</h2>
               <Link href="/projects"
@@ -140,7 +140,7 @@ export default function HomePage() {
             transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="bg-[#0a4264] rounded-2xl p-6 sm:p-10 lg:p-14 mb-12 lg:mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <p className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-3">{t.hc_tag}</p>
+              <p className="text-[12px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-3">{t.hc_tag}</p>
               <h2 className="text-[clamp(22px,4vw,36px)] font-black text-white leading-tight tracking-tight mb-4">{t.hc_title}</h2>
               <p className="text-[14px] sm:text-[15px] text-white/60 leading-[1.65] mb-6 sm:mb-7">{t.hc_body}</p>
               <Link href="/connect"
@@ -159,7 +159,7 @@ export default function HomePage() {
                   <span className="text-[20px] shrink-0">{item.icon}</span>
                   <div>
                     <div className="text-[13px] sm:text-[14px] font-bold text-white">{item.t}</div>
-                    <div className="text-[11px] sm:text-[12px] text-white/50 mt-0.5">{item.s}</div>
+                    <div className="text-[12px] sm:text-[13px] text-white/50 mt-0.5">{item.s}</div>
                   </div>
                 </div>
               ))}

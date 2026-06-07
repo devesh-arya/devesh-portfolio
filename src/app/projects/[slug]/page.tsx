@@ -37,13 +37,13 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             className="bg-[#0a4264] rounded-[20px] p-6 sm:p-10 lg:p-14 mt-5 sm:mt-6">
-            <p className="text-[11px] font-bold tracking-[.14em] uppercase text-[#ff6900] mb-3 sm:mb-4">{cs.tag}</p>
+            <p className="text-[12px] font-bold tracking-[.14em] uppercase text-[#ff6900] mb-3 sm:mb-4">{cs.tag}</p>
             <h1 className="text-[clamp(26px,5vw,52px)] font-black text-white leading-[1.08] tracking-tight mb-4 sm:mb-5">{cs.title}</h1>
             <p className="text-[14px] sm:text-[16px] sm:text-[17px] leading-[1.7] text-white/60 max-w-[600px] mb-8 sm:mb-10">{cs.subtitle}</p>
             <div className="flex flex-wrap gap-6 sm:gap-10 pt-5 sm:pt-7 border-t border-white/10">
               {cs.meta.map((m) => (
                 <div key={m.lbl}>
-                  <div className="text-[10px] tracking-[.1em] uppercase text-white/40 mb-1">{m.lbl}</div>
+                  <div className="text-[12px] tracking-[.1em] uppercase text-white mb-1">{m.lbl}</div>
                   <div className="text-[13px] sm:text-[14px] font-bold text-white">{m.val}</div>
                 </div>
               ))}
@@ -67,7 +67,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
             {cs.sections.map((section, si) => (
               <motion.div key={si} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + si * 0.08 }} className="mb-10 sm:mb-14">
-                <p className="text-[11px] font-bold tracking-[.14em] uppercase text-[#ff6900] mb-2">{section.slabel}</p>
+                <p className="text-[12px] font-bold tracking-[.14em] uppercase text-[#ff6900] mb-2">{section.slabel}</p>
                 <h2 className="text-[18px] sm:text-[22px] font-extrabold text-[#0a4264] mb-3 tracking-tight">{section.stitle}</h2>
                 <p className="text-[14px] sm:text-[15px] leading-[1.78] text-[#4a6580]">{section.stext}</p>
 

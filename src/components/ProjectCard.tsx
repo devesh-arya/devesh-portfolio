@@ -37,7 +37,7 @@ export default function ProjectCard({ project, variant = "grid", index = 0 }: Pr
               )}
             </div>
             <div className="p-4 sm:p-5">
-              <div className="text-[10px] font-bold tracking-[.08em] uppercase text-[#4a6580] mb-1.5">{project.tagText}</div>
+              <div className="text-[12px] font-bold tracking-[.08em] uppercase text-[#4a6580] mb-1.5">{project.tagText}</div>
               <div className="text-[15px] sm:text-[17px] font-extrabold text-[#0a4264] leading-snug">{project.name}</div>
             </div>
           </div>
@@ -59,14 +59,14 @@ export default function ProjectCard({ project, variant = "grid", index = 0 }: Pr
               )}
             </div>
             <div className="p-6 sm:p-8 lg:p-9">
-              <span className={`inline-block rounded-full px-[14px] py-1 text-[11px] font-bold tracking-[.06em] uppercase mb-4 ${project.tag}`}>
+              <span className={`inline-block rounded-full px-[14px] py-1 text-[12px] font-bold tracking-[.06em] uppercase mb-4 ${project.tag}`}>
                 {project.tagText}
               </span>
               <h3 className="text-[20px] sm:text-[24px] font-black text-[#0a4264] mb-2.5 leading-tight tracking-tight">{project.name}</h3>
               <p className="text-[13px] sm:text-[14px] leading-[1.72] text-[#4a6580] mb-4 sm:mb-5">{project.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {project.pills.map((pill) => (
-                  <span key={pill} className="bg-[#f7f8fa] border border-[#e2eaf0] rounded-full px-3 py-1 text-[11px] sm:text-[12px] font-medium text-[#4a6580]">{pill}</span>
+                  <span key={pill} className="bg-[#f7f8fa] border border-[#e2eaf0] rounded-full px-3 py-1 text-[12px] sm:text-[13px] font-medium text-[#4a6580]">{pill}</span>
                 ))}
               </div>
               <div className="mt-4 sm:mt-5 text-[13px] font-bold text-[#ff6900] flex items-center gap-1.5 group-hover:gap-3 transition-all duration-200">
@@ -92,14 +92,14 @@ export default function ProjectCard({ project, variant = "grid", index = 0 }: Pr
             )}
           </div>
           <div className="p-5 sm:p-6">
-            <span className={`inline-block rounded-full px-[14px] py-1 text-[11px] font-bold tracking-[.06em] uppercase mb-3 ${project.tag}`}>
+            <span className={`inline-block rounded-full px-[14px] py-1 text-[12px] font-bold tracking-[.06em] uppercase mb-3 ${project.tag}`}>
               {project.tagText}
             </span>
             <h3 className="text-[17px] sm:text-[19px] font-black text-[#0a4264] mb-2 leading-tight tracking-tight">{project.name}</h3>
             <p className="text-[13px] leading-[1.7] text-[#4a6580] mb-4">{project.desc}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.pills.map((pill) => (
-                <span key={pill} className="bg-[#f7f8fa] border border-[#e2eaf0] rounded-full px-3 py-1 text-[11px] sm:text-[12px] font-medium text-[#4a6580]">{pill}</span>
+                <span key={pill} className="bg-[#f7f8fa] border border-[#e2eaf0] rounded-full px-3 py-1 text-[12px] sm:text-[13px] font-medium text-[#4a6580]">{pill}</span>
               ))}
             </div>
             <div className="text-[13px] font-bold text-[#ff6900] flex items-center gap-1.5 group-hover:gap-3 transition-all duration-200">

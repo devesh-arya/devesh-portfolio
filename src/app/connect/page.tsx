@@ -97,7 +97,7 @@ function Terminal({ lang }: { lang: "en" | "fr" }) {
         <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
         <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
         <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-        <span className="ml-2 text-[11px] sm:text-[12px] text-[#8b949e]">devesh@portfolio ~ </span>
+        <span className="ml-2 text-[12px] sm:text-[13px] text-[#8b949e]">devesh@portfolio ~ </span>
       </div>
       <div className="p-4 sm:p-5 text-[12px] sm:text-[13px] leading-[1.8] min-h-[160px] sm:min-h-[180px]">
         <div className="text-[#8b949e]">
@@ -162,7 +162,7 @@ const links: {
 
               {/* Left */}
               <div>
-                <motion.p {...fadeUp(0.0)} className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-3">
+                <motion.p {...fadeUp(0.0)} className="text-[12px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-3">
                   {t.connect_label}
                 </motion.p>
                 <motion.h1 {...fadeUp(0.05)}

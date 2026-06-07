@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       <main className="pt-[68px]">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20">
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}
-            className="text-[11px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2">
+            className="text-[12px] font-bold tracking-[.16em] uppercase text-[#ff6900] mb-2">
             {t.proj_label}
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}
