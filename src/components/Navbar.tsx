@@ -68,11 +68,11 @@ export default function Navbar() {
             </a>
             <button onClick={toggle} aria-label="Toggle language"
               className="ml-1 flex items-center gap-[7px] bg-white border-[1.5px] border-[#e2eaf0] rounded-full px-3 py-[5px] cursor-pointer hover:border-[#ff6900] transition-all duration-200 select-none">
-              <span className={`text-[12px] font-bold tracking-widest transition-colors duration-200 ${!isFr ? "text-[#ff6900]" : "text-[#7a95a8]"}`}>EN</span>
+              <span className={`text-[12px] font-bold tracking-widest transition-colors duration-200 ${!isFr ? "text-[#ff6900]" : "text-[#4a6580]"}`}>EN</span>
               <div className={`w-7 h-4 rounded-full relative transition-colors duration-200 ${isFr ? "bg-[#ff6900]" : "bg-[#e2eaf0]"}`}>
                 <div className={`w-3 h-3 rounded-full absolute top-[2px] transition-all duration-300 ${isFr ? "bg-white translate-x-[14px]" : "bg-[#ff6900] translate-x-[2px]"}`} />
               </div>
-              <span className={`text-[12px] font-bold tracking-widest transition-colors duration-200 ${isFr ? "text-[#ff6900]" : "text-[#7a95a8]"}`}>FR</span>
+              <span className={`text-[12px] font-bold tracking-widest transition-colors duration-200 ${isFr ? "text-[#ff6900]" : "text-[#4a6580]"}`}>FR</span>
             </button>
           </div>
 
@@ -80,11 +80,11 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <button onClick={toggle} aria-label="Toggle language"
               className="flex items-center gap-1.5 bg-white border-[1.5px] border-[#e2eaf0] rounded-full px-2.5 py-1 cursor-pointer hover:border-[#ff6900] transition-all duration-200 select-none">
-              <span className={`text-[11px] font-bold ${!isFr ? "text-[#ff6900]" : "text-[#7a95a8]"}`}>EN</span>
+              <span className={`text-[11px] font-bold ${!isFr ? "text-[#ff6900]" : "text-[#4a6580]"}`}>EN</span>
               <div className={`w-6 h-3.5 rounded-full relative transition-colors duration-200 ${isFr ? "bg-[#ff6900]" : "bg-[#e2eaf0]"}`}>
                 <div className={`w-2.5 h-2.5 rounded-full absolute top-[2px] transition-all duration-300 ${isFr ? "bg-white translate-x-[12px]" : "bg-[#ff6900] translate-x-[2px]"}`} />
               </div>
-              <span className={`text-[11px] font-bold ${isFr ? "text-[#ff6900]" : "text-[#7a95a8]"}`}>FR</span>
+              <span className={`text-[11px] font-bold ${isFr ? "text-[#ff6900]" : "text-[#4a6580]"}`}>FR</span>
             </button>
             <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"
               className="w-9 h-9 rounded-full border-[1.5px] border-[#e2eaf0] flex items-center justify-center text-[#0a4264] hover:bg-[#e8f0f6] transition-all duration-200">

@@ -37,7 +37,7 @@ export default function ProjectCard({ project, variant = "grid", index = 0 }: Pr
               )}
             </div>
             <div className="p-4 sm:p-5">
-              <div className="text-[10px] font-bold tracking-[.08em] uppercase text-[#7a95a8] mb-1.5">{project.tagText}</div>
+              <div className="text-[10px] font-bold tracking-[.08em] uppercase text-[#4a6580] mb-1.5">{project.tagText}</div>
               <div className="text-[15px] sm:text-[17px] font-extrabold text-[#0a4264] leading-snug">{project.name}</div>
             </div>
           </div>

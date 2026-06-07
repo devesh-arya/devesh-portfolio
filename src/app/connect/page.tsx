@@ -180,7 +180,7 @@ const links: {
                       className="flex items-center justify-between py-4 sm:py-5 border-t border-[#e2eaf0] last:border-b text-inherit no-underline group transition-all duration-200 hover:pl-2.5">
                       <div>
                         <div className="text-[16px] sm:text-[18px] font-extrabold text-[#0a4264]">{link.label}</div>
-                        <div className="text-[12px] sm:text-[13px] text-[#7a95a8] mt-0.5">{link.sub}</div>
+                        <div className="text-[14px] sm:text-[16px] text-[#4a6580] mt-0.5">{link.sub}</div>
                       </div>
                       <span className="text-[18px] sm:text-[20px] font-bold text-[#ff6900] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                     </a>
@@ -203,7 +203,7 @@ const links: {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[12px] sm:text-[13px] text-[#7a95a8] flex items-center gap-1.5 flex-wrap">
+                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[14px] sm:text-[16px] text-[#4a6580] flex items-center gap-1.5 flex-wrap">
                     ⏱ {t.avail_rt} <strong className="text-[#0a4264] ml-1">{t.avail_rv}</strong>
                   </div>
                 </div>

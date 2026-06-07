@@ -50,11 +50,11 @@ export default function AboutPage() {
           </motion.h2>
           <motion.div {...fadeUp(0.15)} className="border-t border-[#e2eaf0]">
             <div className="grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-2 sm:gap-6 py-6 sm:py-7">
-              <div className="text-[13px] font-semibold text-[#7a95a8] pt-0 sm:pt-1">2021</div>
+              <div className="text-[13px] font-semibold text-[#4a6580] pt-0 sm:pt-1">2021</div>
               <div>
                 <div className="text-[15px] sm:text-[16px] font-extrabold text-[#0a4264] mb-0.5">{t.exp_role}</div>
                 <div className="text-[13px] sm:text-[14px] font-semibold text-[#ff6900] mb-1">{t.exp_co}</div>
-                <div className="text-[12px] sm:text-[13px] text-[#7a95a8] mb-2.5">{t.exp_dur}</div>
+                <div className="text-[12px] sm:text-[13px] text-[#4a6580] mb-2.5">{t.exp_dur}</div>
                 <div className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580]">{t.exp_desc}</div>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function AboutPage() {
           </motion.h2>
           <motion.div {...fadeUp(0.25)} className="border-t border-[#e2eaf0]">
             <div className="grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-2 sm:gap-6 py-6 sm:py-7">
-              <div className="text-[13px] font-semibold text-[#7a95a8]">2013–2017</div>
+              <div className="text-[13px] font-semibold text-[#4a6580]">2013–2017</div>
               <div>
                 <div className="text-[15px] sm:text-[16px] font-extrabold text-[#0a4264] mb-0.5">{t.edu_role}</div>
                 <div className="text-[13px] sm:text-[14px] font-semibold text-[#ff6900] mb-1">{t.edu_co}</div>
-                <div className="text-[12px] sm:text-[13px] text-[#7a95a8] mb-2.5">{t.edu_dur}</div>
+                <div className="text-[12px] sm:text-[13px] text-[#4a6580] mb-2.5">{t.edu_dur}</div>
                 <div className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580]">{t.edu_desc}</div>
               </div>
             </div>
