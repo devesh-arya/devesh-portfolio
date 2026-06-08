@@ -84,7 +84,6 @@ body {
   transition: background 0.2s, color 0.2s;
   cursor: default;
 }
-.skill-chip:hover { background: #ff6900; color: #fff; }
 
 /* Canvas dots background for connect page */
 #connect-canvas {
