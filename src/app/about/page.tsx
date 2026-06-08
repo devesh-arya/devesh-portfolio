@@ -36,11 +36,11 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div {...fadeUp(0.05)} className="max-w-[760px] mb-4 space-y-4">
-            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#0a4264]"
+            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#005677]"
               dangerouslySetInnerHTML={{ __html: t.about_p1 }} />
-            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#0a4264]"
+            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#005677]"
               dangerouslySetInnerHTML={{ __html: t.about_p2 }} />
-            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#0a4264]"
+            <p className="text-[15px] sm:text-[17px] font-medium leading-[1.78] text-[#005677]"
               dangerouslySetInnerHTML={{ __html: t.about_p3 }} />
           </motion.div>
 
@@ -50,12 +50,12 @@ export default function AboutPage() {
           </motion.h2>
           <motion.div {...fadeUp(0.15)} className="border-t border-[#e2eaf0]">
             <div className="grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-2 sm:gap-6 py-6 sm:py-7">
-              <div className="text-[13px] font-semibold text-[#4a6580] pt-0 sm:pt-1">2021</div>
+              <div className="text-[15px] font-semibold text-[#005677] pt-0 sm:pt-1">2021 – Present</div>
               <div>
                 <div className="text-[15px] sm:text-[16px] font-extrabold text-[#0a4264] mb-0.5">{t.exp_role}</div>
-                <div className="text-[13px] sm:text-[14px] font-semibold text-[#ff6900] mb-1">{t.exp_co}</div>
-                <div className="text-[12px] sm:text-[13px] text-[#4a6580] mb-2.5">{t.exp_dur}</div>
-                <div className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580]">{t.exp_desc}</div>
+                <div className="text-[14px] sm:text-[16px] font-semibold text-[#ff6900] mb-1">{t.exp_co}</div>
+                <div className="text-[12px] sm:text-[13px] text-[#005677] mb-2.5">{t.exp_dur}</div>
+                <div className="text-[14px] sm:text-[16px] leading-[1.5] text-[#005677]">{t.exp_desc}</div>
               </div>
             </div>
           </motion.div>
@@ -66,12 +66,12 @@ export default function AboutPage() {
           </motion.h2>
           <motion.div {...fadeUp(0.25)} className="border-t border-[#e2eaf0]">
             <div className="grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-2 sm:gap-6 py-6 sm:py-7">
-              <div className="text-[13px] font-semibold text-[#4a6580]">2013–2017</div>
+              <div className="text-[15px] font-semibold text-[#005677]">2013–2017</div>
               <div>
                 <div className="text-[15px] sm:text-[16px] font-extrabold text-[#0a4264] mb-0.5">{t.edu_role}</div>
-                <div className="text-[13px] sm:text-[14px] font-semibold text-[#ff6900] mb-1">{t.edu_co}</div>
-                <div className="text-[12px] sm:text-[13px] text-[#4a6580] mb-2.5">{t.edu_dur}</div>
-                <div className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580]">{t.edu_desc}</div>
+                <div className="text-[14px] sm:text-[16px] font-semibold text-[#ff6900] mb-1">{t.edu_co}</div>
+                <div className="text-[13px] sm:text-[14px] text-[#005677] mb-2.5">{t.edu_dur}</div>
+                <div className="text-[14px] sm:text-[16px] leading-[1.5] text-[#005677]">{t.edu_desc}</div>
               </div>
             </div>
           </motion.div>

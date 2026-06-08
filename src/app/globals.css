@@ -7,10 +7,13 @@
 :root {
   --font-figtree: 'Figtree', sans-serif;
   --orange: #ff6900;
-  --orange-dark: #e55e00;
+  --orange-dark: #ea580c;
+  --crimson-red: #dc2626;
   --navy: #0a4264;
   --navy-light: #e8f0f6;
   --border: #e2eaf0;
+  --gradient-start: #ea580c;
+  --gradient-end: #dc2626;
 }
 
 * { box-sizing: border-box; }
@@ -25,12 +28,21 @@ body {
   overflow-x: hidden;
 }
 
+/* Text Gradient */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* Marquee */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.animate-marquee { animation: marquee 32s linear infinite; }
+.animate-marquee { animation: marquee 70s linear infinite; }
 .animate-marquee:hover { animation-play-state: paused; }
 
 /* Pulse dot */
@@ -66,8 +78,7 @@ body {
   border-radius: 100px;
   padding: 10px 24px;
   font-size: 14px;
-  font-weight: 800;
-  color: #ff6900;
+  font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
   transition: background 0.2s, color 0.2s;

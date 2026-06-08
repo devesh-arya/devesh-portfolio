@@ -28,7 +28,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10">
           <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }} className="pt-6 sm:pt-8">
             <Link href="/projects"
-              className="inline-flex items-center gap-2 text-[13px] font-bold text-[#4a6580] bg-white border border-[#e2eaf0] px-4 py-2 rounded-full hover:text-[#0a4264] hover:bg-[#e8f0f6] transition-all duration-200">
+              className="inline-flex items-center gap-2 text-[13px] font-bold text-[#005677] bg-white border border-[#e2eaf0] px-4 py-2 rounded-full hover:text-[#0a4264] hover:bg-[#e8f0f6] transition-all duration-200">
               {t.back_projects}
             </Link>
           </motion.div>
@@ -69,10 +69,10 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
                 transition={{ duration: 0.5, delay: 0.1 + si * 0.08 }} className="mb-10 sm:mb-14">
                 <p className="text-[12px] font-bold tracking-[.14em] uppercase text-[#ff6900] mb-2">{section.slabel}</p>
                 <h2 className="text-[18px] sm:text-[22px] font-extrabold text-[#0a4264] mb-3 tracking-tight">{section.stitle}</h2>
-                <p className="text-[14px] sm:text-[15px] leading-[1.78] text-[#4a6580]">{section.stext}</p>
+                <p className="text-[14px] sm:text-[15px] leading-[1.78] text-[#005677]">{section.stext}</p>
 
                 {section.callout && (
-                  <div className="bg-white border border-[#e2eaf0] border-l-[4px] border-l-[#ff6900] rounded-r-[10px] px-5 sm:px-6 py-4 sm:py-5 mt-4 sm:mt-5 text-[14px] sm:text-[15px] leading-[1.65] text-[#4a6580]"
+                  <div className="bg-white border border-[#e2eaf0] border-l-[4px] border-l-[#ff6900] rounded-r-[10px] px-5 sm:px-6 py-4 sm:py-5 mt-4 sm:mt-5 text-[14px] sm:text-[15px] leading-[1.65] text-[#005677]"
                     dangerouslySetInnerHTML={{ __html: section.callout }} />
                 )}
 
@@ -83,7 +83,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
                         box.cls === "b1" ? "cs-box-b1" : box.cls === "b2" ? "cs-box-b2" : "cs-box-b3 sm:col-span-2"
                       }`}>
                         <div className="text-[14px] sm:text-[15px] font-extrabold text-[#0a4264] mb-2">{box.title}</div>
-                        <p className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580]">{box.text}</p>
+                        <p className="text-[13px] sm:text-[14px] leading-[1.7] text-[#005677]">{box.text}</p>
                       </div>
                     ))}
                   </div>
@@ -94,10 +94,10 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
                     <div className="text-[14px] sm:text-[15px] font-extrabold text-[#0a4264] mb-2.5">
                       🎯 {lang === "fr" ? "Mon rôle" : "My Role"}
                     </div>
-                    <p className="text-[13px] sm:text-[14px] leading-[1.7] text-[#4a6580] mb-4">{section.role.text}</p>
+                    <p className="text-[13px] sm:text-[14px] leading-[1.7] text-[#005677] mb-4">{section.role.text}</p>
                     <ul className="list-none p-0 flex flex-col gap-2">
                       {section.role.items.map((item, ii) => (
-                        <li key={ii} className="text-[13px] sm:text-[14px] text-[#4a6580] pl-4 relative leading-snug before:content-['·'] before:absolute before:left-0.5 before:text-[#ff6900] before:text-xl before:leading-[14px] before:top-1">
+                        <li key={ii} className="text-[13px] sm:text-[14px] text-[#005677] pl-4 relative leading-snug before:content-['·'] before:absolute before:left-0.5 before:text-[#ff6900] before:text-xl before:leading-[14px] before:top-1">
                           {item}
                         </li>
                       ))}
@@ -108,7 +108,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
             ))}
 
             <Link href="/projects"
-              className="inline-flex items-center gap-2 text-[13px] font-bold text-[#4a6580] bg-white border border-[#e2eaf0] px-4 py-2 rounded-full hover:text-[#0a4264] hover:bg-[#e8f0f6] transition-all duration-200">
+              className="inline-flex items-center gap-2 text-[13px] font-bold text-[#005677] bg-white border border-[#e2eaf0] px-4 py-2 rounded-full hover:text-[#0a4264] hover:bg-[#e8f0f6] transition-all duration-200">
               {t.back_projects}
             </Link>
           </div>

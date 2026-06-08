@@ -37,13 +37,13 @@ export const translations: Record<Lang, Translation> = {
     about_p1:
       "👋 Hey, I'm <strong>Devesh Arya</strong> — a Front-End Developer based in British Columbia, Canada with 5+ years of experience building scalable, performant web applications. I've been crafting digital experiences since I first picked up JavaScript, and I'm passionate about the details that make products feel <em>right</em>.",
     about_p2:
-      "I currently work at <a href='#' class='text-orange hover:underline'>Clear Digital</a> in San Jose, where I've shipped production code for Stanford University, Surescripts, the Hoover Institution, Apexanalytix, Model N, Virtana, and more. I thrive in Agile teams, mentor junior developers, and obsess over Lighthouse scores.",
+      "I currently work at <a href='https://www.cleardigital.com/' target='_blank' rel='noopener noreferrer' class='text-orange hover:underline'>Clear Digital</a> in San Jose, where I've shipped production code for Stanford University, Surescripts, the Hoover Institution, Apexanalytix, Model N, Virtana, and more. I thrive in Agile teams, mentor junior developers, and obsess over Lighthouse scores.",
     about_p3:
       "I believe in clean code, empathy-driven design, and writing components that future-you will actually be happy to read. <strong>Let's build something great.</strong>",
     exp_title: "Experience",
     exp_role: "Front-End Developer",
     exp_co: "Clear Digital — San Jose, CA",
-    exp_dur: "Apr 2021 · Present · 4+ years",
+    exp_dur: "Apr 2021 · Present · 5+ years",
     exp_desc:
       "Building responsive web applications with React.js, Next.js, TypeScript, and Redux for high-profile clients. Mentoring 5+ junior developers, optimizing Lighthouse scores, integrating REST APIs, and leading code reviews in Agile sprints.",
     edu_title: "Education",

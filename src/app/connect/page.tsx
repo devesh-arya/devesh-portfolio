@@ -168,7 +168,7 @@ const links: {
                 <motion.h1 {...fadeUp(0.05)}
                   className="text-[clamp(32px,6vw,60px)] font-black text-[#0a4264] leading-[1.05] tracking-tight mb-5"
                   dangerouslySetInnerHTML={{ __html: t.connect_h }} />
-                <motion.p {...fadeUp(0.1)} className="text-[14px] sm:text-[16px] text-[#4a6580] leading-[1.65] max-w-[420px] mb-8 sm:mb-10">
+                <motion.p {...fadeUp(0.1)} className="text-[14px] sm:text-[16px] text-[#005677] leading-[1.65] max-w-[420px] mb-8 sm:mb-10">
                   {t.connect_sub}
                 </motion.p>
                 <motion.div {...fadeUp(0.15)} className="flex flex-col">
@@ -180,7 +180,7 @@ const links: {
                       className="flex items-center justify-between py-4 sm:py-5 border-t border-[#e2eaf0] last:border-b text-inherit no-underline group transition-all duration-200 hover:pl-2.5">
                       <div>
                         <div className="text-[16px] sm:text-[18px] font-extrabold text-[#0a4264]">{link.label}</div>
-                        <div className="text-[14px] sm:text-[16px] text-[#4a6580] mt-0.5">{link.sub}</div>
+                        <div className="text-[14px] sm:text-[16px] text-[#005677] mt-0.5">{link.sub}</div>
                       </div>
                       <span className="text-[18px] sm:text-[20px] font-bold text-[#ff6900] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
                     </a>
@@ -198,12 +198,12 @@ const links: {
                   </div>
                   <ul className="flex flex-col gap-2">
                     {[t.avail1, t.avail2, t.avail3].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-[13px] sm:text-[14px] text-[#4a6580]">
+                      <li key={item} className="flex items-center gap-2 text-[13px] sm:text-[14px] text-[#005677]">
                         <span className="text-[#ff6900] font-bold shrink-0">✓</span> {item}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[14px] sm:text-[16px] text-[#4a6580] flex items-center gap-1.5 flex-wrap">
+                  <div className="mt-4 pt-4 border-t border-[#e2eaf0] text-[14px] sm:text-[16px] text-[#005677] flex items-center gap-1.5 flex-wrap">
                     ⏱ {t.avail_rt} <strong className="text-[#0a4264] ml-1">{t.avail_rv}</strong>
                   </div>
                 </div>

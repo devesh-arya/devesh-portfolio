@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             {t.proj_title}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[14px] sm:text-[16px] text-[#4a6580] mb-8 sm:mb-12 max-w-[540px] leading-relaxed">
+            className="text-[14px] sm:text-[16px] text-[#005677] mb-8 sm:mb-12 max-w-[540px] leading-relaxed">
             {t.proj_sub}
           </motion.p>
 
