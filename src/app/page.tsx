@@ -40,7 +40,7 @@ export default function HomePage() {
 
               <motion.h1 {...fadeUp(0.1)}
                 className="text-[clamp(44px,8vw,76px)] font-black text-[#0a4264] leading-[1.03] tracking-[-2px] mb-3">
-                Devesh<br /><span className="text-[#ff6900]">Arya</span>
+                Devesh<span className="text-[#ff6900]"> Arya</span>
               </motion.h1>
 
               <motion.p {...fadeUp(0.15)} className="text-[16px] sm:text-[18px] font-semibold text-[#ff6900] mb-5 tracking-tight">
